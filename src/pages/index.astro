@@ -1,0 +1,162 @@
+---
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-primary-50 to-white">
+      <div class="container-custom py-20 md:py-32">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Ship faster with AI teammates
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Multi-agent AI coordination for solo founders and small startups. 
+            Specialized agents collaborate in shared threads while you stay in control.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://github.com/lurielle-studio/cortana" class="btn-primary w-full sm:w-auto">
+              Get Started Free
+            </a>
+            <a href="#features" class="btn-secondary w-full sm:w-auto">
+              See How It Works
+            </a>
+          </div>
+          <p class="mt-4 text-sm text-gray-500">
+            Open source • 1,810+ passing tests • MIT License
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Built for builders who need to ship
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Cortana coordinates multiple AI agents to work together on your project, 
+            with human approval at every step.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1: Multi-Agent Coordination -->
+          <div class="p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-600">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Multi-Agent Coordination</h3>
+            <p class="text-gray-600">Specialized agents collaborate in shared conversation threads—no hidden orchestration.</p>
+          </div>
+          
+          <!-- Feature 2: Human Approval Gate -->
+          <div class="p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-600">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Human Approval Gate</h3>
+            <p class="text-gray-600">You review and approve every agent action before it executes. Stay in full control.</p>
+          </div>
+          
+          <!-- Feature 3: Turn Coordinator -->
+          <div class="p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-600">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Patented Turn Coordinator</h3>
+            <p class="text-gray-600">Sequential dispatch pattern ensures agents take turns efficiently without conflicts.</p>
+          </div>
+          
+          <!-- Feature 4: Context Memory -->
+          <div class="p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-600">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Context Memory</h3>
+            <p class="text-gray-600">Agents remember across conversations with three-level observation memory.</p>
+          </div>
+          
+          <!-- Feature 5: MCP Integration -->
+          <div class="p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-600">
+                <circle cx="12" cy="18" r="3"/>
+                <circle cx="6" cy="6" r="3"/>
+                <circle cx="18" cy="6" r="3"/>
+                <path d="M6 9v3a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9"/>
+                <line x1="12" x2="12" y1="15" y2="21"/>
+                <line x1="6" x2="6" y1="3" y2="6"/>
+                <line x1="18" x2="18" y1="3" y2="6"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">MCP Integration</h3>
+            <p class="text-gray-600">Connect to GitHub and other tools for real-world task execution.</p>
+          </div>
+          
+          <!-- Feature 6: Built with Elixir/OTP -->
+          <div class="p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-600">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Built with Elixir/OTP</h3>
+            <p class="text-gray-600">Production-ready with 1,810+ passing tests. Reliable and scalable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to build with AI teammates?
+          </h2>
+          <p class="text-xl text-primary-100 mb-8">
+            Join solo founders and small startups shipping faster with Cortana.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://github.com/lurielle-studio/cortana" class="bg-white text-primary-600 px-8 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors w-full sm:w-auto">
+              Get Started on GitHub
+            </a>
+            <a href="/docs/quickstart" class="bg-primary-700 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-800 transition-colors w-full sm:w-auto">
+              Read the Docs
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+</style>
