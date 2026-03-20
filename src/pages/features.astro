@@ -1,0 +1,472 @@
+---
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-primary-50 to-white py-20">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            See how Cortana works
+          </h1>
+          <p class="text-xl text-gray-600">
+            Multi-agent coordination with human oversight. Watch AI teammates collaborate in visible conversations while you stay in control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 1: Multi-Agent Coordination -->
+    <section class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-4">
+              Core Feature
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Multi-Agent Coordination
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Unlike single-model chatbots, Cortana orchestrates multiple specialized agents that collaborate in shared conversation threads. No hidden orchestration—everything is visible.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">@mention system to invoke specific expertise (@ceo, @cto, @worker)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">All agents see the full conversation history</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Agents build on each other's work transparently</span>
+              </li>
+            </ul>
+            <a href="/docs/architecture" class="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center">
+              Learn about our architecture
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="text-sm text-gray-500 mb-4 font-medium">Agent Collaboration Flow</div>
+            <div class="space-y-4">
+              <!-- User Message -->
+              <div class="flex items-start">
+                <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3 flex-shrink-0">You</div>
+                <div class="bg-white rounded-lg p-3 shadow-sm border border-gray-200 flex-1">
+                  <p class="text-sm text-gray-800">@ceo @cto Let's build a user authentication system</p>
+                </div>
+              </div>
+              
+              <!-- CEO Response -->
+              <div class="flex items-start">
+                <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3 flex-shrink-0">CEO</div>
+                <div class="bg-white rounded-lg p-3 shadow-sm border border-gray-200 flex-1">
+                  <p class="text-sm text-gray-800">I'll break this down into tasks:</p>
+                  <ul class="text-sm text-gray-700 mt-2 space-y-1">
+                    <li>• Design database schema</li>
+                    <li>• Implement login/logout endpoints</li>
+                    <li>• Write integration tests</li>
+                  </ul>
+                  <div class="mt-2 text-xs text-primary-600 font-medium">✓ Created 3 tasks</div>
+                </div>
+              </div>
+              
+              <!-- CTO Response -->
+              <div class="flex items-start">
+                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3 flex-shrink-0">CTO</div>
+                <div class="bg-white rounded-lg p-3 shadow-sm border border-gray-200 flex-1">
+                  <p class="text-sm text-gray-800">I'll review the architecture. We should use JWT with refresh tokens for security.</p>
+                  <div class="mt-2 text-xs text-purple-600 font-medium">✓ Added technical guidance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 2: Human Approval Gate -->
+    <section class="py-20 bg-gray-50">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="bg-white rounded-xl p-6 border border-gray-200">
+              <div class="text-sm text-gray-500 mb-4 font-medium">Task Approval Workflow</div>
+              
+              <!-- Task Card -->
+              <div class="border border-gray-200 rounded-lg p-4 mb-4">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h4 class="font-semibold text-gray-900">Implement login endpoint</h4>
+                    <p class="text-sm text-gray-600 mt-1">Create POST /api/login with email/password validation</p>
+                  </div>
+                  <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded">Proposed</span>
+                </div>
+                <div class="flex items-center text-xs text-gray-500 mb-3">
+                  <span class="mr-4">Proposed by @worker</span>
+                  <span>Est. 2 hours</span>
+                </div>
+                <div class="flex gap-2">
+                  <button class="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded hover:bg-green-700">Approve</button>
+                  <button class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded hover:bg-gray-200">Edit</button>
+                  <button class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded hover:bg-gray-200">Reject</button>
+                </div>
+              </div>
+              
+              <p class="text-sm text-gray-600 text-center">You're always in control—nothing executes without your approval</p>
+            </div>
+          </div>
+          
+          <div class="order-1 lg:order-2">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+              Safety First
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Human Approval Gate
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Unlike fully autonomous AI systems, Cortana requires human approval for every agent action. You're always in control.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Review all proposed tasks before execution</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Get notified via email or in-app alerts</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Full visibility into agent conversations</span>
+              </li>
+            </ul>
+            
+            <div class="bg-gray-100 rounded-lg p-4">
+              <p class="text-sm text-gray-700 font-medium mb-2">Before vs After</p>
+              <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p class="text-red-600 font-medium mb-1">Other AI Tools</p>
+                  <p class="text-gray-600">Execute immediately, no oversight, hope for the best</p>
+                </div>
+                <div>
+                  <p class="text-green-600 font-medium mb-1">Cortana</p>
+                  <p class="text-gray-600">You approve first, full control, sleep soundly</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 3: Task Board -->
+    <section class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Visual Task Board
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Track all agent-proposed work in one place. From proposal to completion, see exactly what's happening.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-4 gap-6">
+          <!-- Proposed Column -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold text-gray-900">Proposed</h3>
+              <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded">3</span>
+            </div>
+            <div class="space-y-3">
+              <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-900">Design auth schema</p>
+                <p class="text-xs text-gray-600 mt-1">@ceo • 2 min ago</p>
+              </div>
+              <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-900">Write tests</p>
+                <p class="text-xs text-gray-600 mt-1">@worker • 5 min ago</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Approved Column -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold text-gray-900">Approved</h3>
+              <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">1</span>
+            </div>
+            <div class="space-y-3">
+              <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-900">Login endpoint</p>
+                <p class="text-xs text-gray-600 mt-1">@worker • Approved 10 min ago</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- In Progress Column -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold text-gray-900">In Progress</h3>
+              <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded">1</span>
+            </div>
+            <div class="space-y-3">
+              <div class="bg-purple-50 border border-purple-200 rounded-lg p-3">
+                <p class="text-sm font-medium text-gray-900">DB migration</p>
+                <p class="text-xs text-gray-600 mt-1">@worker • 45% complete</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Done Column -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold text-gray-900">Done</h3>
+              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">5</span>
+            </div>
+            <div class="space-y-3">
+              <div class="bg-green-50 border border-green-200 rounded-lg p-3 opacity-60">
+                <p class="text-sm font-medium text-gray-900 line-through">Project setup</p>
+                <p class="text-xs text-gray-600 mt-1">@worker • 1 hour ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 bg-gray-50 rounded-xl p-8">
+          <div class="text-center">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">How It Works</h3>
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+              <div class="flex items-center">
+                <span class="w-6 h-6 bg-yellow-100 text-yellow-800 rounded-full flex items-center justify-center font-bold text-xs mr-2">1</span>
+                <span class="text-gray-700">Agent proposes task</span>
+              </div>
+              <div class="flex items-center">
+                <span class="w-6 h-6 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center font-bold text-xs mr-2">2</span>
+                <span class="text-gray-700">Human reviews & approves</span>
+              </div>
+              <div class="flex items-center">
+                <span class="w-6 h-6 bg-purple-100 text-purple-800 rounded-full flex items-center justify-center font-bold text-xs mr-2">3</span>
+                <span class="text-gray-700">Worker executes</span>
+              </div>
+              <div class="flex items-center">
+                <span class="w-6 h-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center font-bold text-xs mr-2">4</span>
+                <span class="text-gray-700">Task complete ✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 4: MCP Integration -->
+    <section class="py-20 bg-gray-50">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
+              Integrations
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              MCP Integration
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Connect Cortana to your existing tools via the Model Context Protocol. Agents can discover and use external tools securely.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">GitHub integration (create PRs, manage issues)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Slack, Stripe, and 100+ MCP servers</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Encrypted credential storage with OAuth</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Per-agent tool permissions</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <div class="text-sm text-gray-500 mb-4 font-medium">Example: GitHub Integration</div>
+            
+            <div class="space-y-4">
+              <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <div>
+                  <p class="text-sm font-medium text-gray-900">GitHub</p>
+                  <p class="text-xs text-gray-600">Connected • OAuth 2.0</p>
+                </div>
+                <span class="ml-auto px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Active</span>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-3">
+                <p class="text-xs text-gray-600 mb-2">Agent action:</p>
+                <p class="text-sm text-gray-800 font-mono">$ npx @modelcontextprotocol/server-github create_repo --name "auth-system" --private</p>
+                <div class="mt-2 text-xs text-green-600 font-medium">✓ Repository created (requires approval)</div>
+              </div>
+              
+              <div class="flex gap-2">
+                <button class="flex-1 px-4 py-2 bg-green-600 text-white text-sm font-medium rounded hover:bg-green-700">Approve</button>
+                <button class="flex-1 px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded hover:bg-gray-200">Reject</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 5: Context Memory -->
+    <section class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-4">
+              AI-Powered Memory
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Context Memory
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Never repeat yourself. Cortana's observation memory system captures context at three levels so agents remember everything.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Thread-level: Active conversation context</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Context-level: Archived project knowledge</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-700">Org-level: Company-wide institutional knowledge</span>
+              </li>
+            </ul>
+            
+            <div class="bg-gray-100 rounded-lg p-4">
+              <p class="text-sm text-gray-700 mb-2">Example:</p>
+              <p class="text-sm text-gray-600 italic">"Based on our Q1 decision to use PostgreSQL (from org memory), I'm designing the auth schema with JSONB columns for flexible metadata."</p>
+            </div>
+          </div>
+          
+          <div>
+            <div class="bg-gradient-to-b from-primary-50 to-purple-50 rounded-xl p-6 border border-gray-200">
+              <div class="text-sm text-gray-500 mb-4 font-medium">Memory Hierarchy</div>
+              
+              <!-- Org Level -->
+              <div class="mb-4">
+                <div class="flex items-center mb-2">
+                  <div class="w-3 h-3 bg-purple-600 rounded-full mr-2"></div>
+                  <span class="text-sm font-semibold text-gray-900">Org Level</span>
+                </div>
+                <div class="bg-white rounded-lg p-3 border border-purple-200">
+                  <p class="text-xs text-gray-600 mb-1">Company decisions & strategy</p>
+                  <p class="text-sm text-gray-800">"Q1 2026: PostgreSQL for all new services"</p>
+                </div>
+              </div>
+              
+              <!-- Context Level -->
+              <div class="mb-4">
+                <div class="flex items-center mb-2">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+                  <span class="text-sm font-semibold text-gray-900">Context Level</span>
+                </div>
+                <div class="bg-white rounded-lg p-3 border border-blue-200">
+                  <p class="text-xs text-gray-600 mb-1">Project knowledge (archived threads)</p>
+                  <p class="text-sm text-gray-800">"Auth: JWT + refresh tokens, bcrypt hashing"</p>
+                </div>
+              </div>
+              
+              <!-- Thread Level -->
+              <div>
+                <div class="flex items-center mb-2">
+                  <div class="w-3 h-3 bg-primary-600 rounded-full mr-2"></div>
+                  <span class="text-sm font-semibold text-gray-900">Thread Level</span>
+                </div>
+                <div class="bg-white rounded-lg p-3 border border-primary-200">
+                  <p class="text-xs text-gray-600 mb-1">Active conversation</p>
+                  <p class="text-sm text-gray-800">"CEO created 3 tasks, CTO approved 2"</p>
+                </div>
+              </div>
+              
+              <div class="mt-4 pt-4 border-t border-gray-200">
+                <p class="text-xs text-gray-600 text-center">Threads auto-archive → observations promoted to context level</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to see it in action?
+          </h2>
+          <p class="text-xl text-primary-100 mb-8">
+            Try our interactive demo to experience multi-agent coordination firsthand.
+          </p>
+          <a href="/demo" class="bg-white text-primary-600 px-8 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors inline-flex items-center">
+            Try the Interactive Demo
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

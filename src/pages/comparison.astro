@@ -1,0 +1,557 @@
+---
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-primary-50 to-white py-20">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Honest comparisons
+          </h1>
+          <p class="text-xl text-gray-600">
+            We believe in transparency. Here's how Cortana compares to other approaches—no strawman arguments, just honest pros and cons.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison 1: Cortana vs ChatGPT -->
+    <section class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Cortana vs. Single-Model Chatbots
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            ChatGPT, Claude, and other single-model AI assistants are great for conversation. But building products requires more than chat.
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b-2 border-gray-200">
+                <th class="text-left py-4 px-6 text-gray-900 font-semibold">Feature</th>
+                <th class="text-center py-4 px-6 text-primary-600 font-semibold">Cortana</th>
+                <th class="text-center py-4 px-6 text-gray-600 font-semibold">ChatGPT / Claude</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Agent Architecture</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Multiple specialized agents
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Single generalist model
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Memory</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Persistent (thread → context → org)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Session-only (lost when closed)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Take Actions</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Create tasks, write code, save artifacts
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Chat only (no real actions)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Human Oversight</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Approval required for all actions
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    N/A (no actions to approve)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Task Management</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Built-in Kanban board
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    None
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Integrations</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ MCP (GitHub, Slack, Stripe, etc.)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Limited (browser plugins only)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Cost Control</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Token budgets, model routing
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Flat subscription
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Team Collaboration</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Shared threads, visible coordination
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Individual chats only
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-green-50 rounded-xl p-6 border border-green-200">
+            <h3 class="text-lg font-semibold text-green-900 mb-3">When to use ChatGPT / Claude</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span>Quick questions and brainstorming</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span>Writing and editing text</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span>Learning new concepts</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">•</span>
+                <span>Casual conversation</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-primary-50 rounded-xl p-6 border border-primary-200">
+            <h3 class="text-lg font-semibold text-primary-900 mb-3">When to use Cortana</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-2">•</span>
+                <span>Building actual products (code, features)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-2">•</span>
+                <span>Complex projects requiring multiple specialists</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-2">•</span>
+                <span>Work that needs human approval and oversight</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-2">•</span>
+                <span>Projects that benefit from persistent memory</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison 2: Cortana vs CrewAI/AutoGen -->
+    <section class="py-20 bg-gray-50">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Cortana vs. Agentic Frameworks
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            CrewAI, AutoGen, and LangChain are developer frameworks for building multi-agent systems. Cortana is a complete product.
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b-2 border-gray-200">
+                <th class="text-left py-4 px-6 text-gray-900 font-semibold">Feature</th>
+                <th class="text-center py-4 px-6 text-primary-600 font-semibold">Cortana</th>
+                <th class="text-center py-4 px-6 text-gray-600 font-semibold">CrewAI / AutoGen</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Visibility</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ All messages visible in shared threads
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Hidden orchestration (opaque workflows)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Human Control</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Approval gate for all actions
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Fully autonomous or manual (no middle ground)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">User Interface</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Phoenix LiveView (real-time, no JS needed)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Code-only (build your own UI)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Concurrency Model</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Elixir OTP (proven at scale)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Python threading (GIL limitations)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Memory System</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ 3-level hierarchy with cursors
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Flat history or vector DB only
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Dispatch Pattern</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Patented TurnCoordinator
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Simple round-robin or LLM routing
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Setup Time</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ 5 minutes (clone + run)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Hours to days (framework + custom code)
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Production Ready</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ 1,810+ passing tests
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    You build and test everything
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-gray-100 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">When to use CrewAI / AutoGen</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-gray-600 mr-2">•</span>
+                <span>You need complete custom control over agent behavior</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gray-600 mr-2">•</span>
+                <span>You're building AI features into an existing product</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gray-600 mr-2">•</span>
+                <span>Your team has Python ML engineering expertise</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gray-600 mr-2">•</span>
+                <span>You have time to build, test, and maintain infrastructure</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-primary-50 rounded-xl p-6 border border-primary-200">
+            <h3 class="text-lg font-semibold text-primary-900 mb-3">When to use Cortana</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-2">•</span>
+                <span>You want a complete, working product out of the box</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-2">•</span>
+                <span>You need human oversight and approval workflows</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-2">•</span>
+                <span>You value visibility and transparency</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-600 mr-2">•</span>
+                <span>You want to ship today, not in 3 months</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison 3: Cortana vs Hiring Contractors -->
+    <section class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Cortana vs. Hiring Contractors
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Freelancers and contractors are great—but they're expensive, asynchronous, and not always available. AI agents work 24/7 at a fraction of the cost.
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b-2 border-gray-200">
+                <th class="text-left py-4 px-6 text-gray-900 font-semibold">Factor</th>
+                <th class="text-center py-4 px-6 text-primary-600 font-semibold">Cortana</th>
+                <th class="text-center py-4 px-6 text-gray-600 font-semibold">Freelance Developer</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Availability</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ 24/7, instant response
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Business hours, scheduled calls
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Cost (Monthly)</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ~$50-200 (LLM costs)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-red-100 text-red-800 text-sm font-medium rounded-full">
+                    $5,000-15,000+
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Onboarding</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Instant (already knows context)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    1-2 weeks ramp-up
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Scope Flexibility</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Pivot instantly, no hard feelings
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Contract renegotiation needed
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Specialization</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Multiple agents (CEO, CTO, Dev, etc.)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Hire separate specialists
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Memory Retention</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Never forgets (observation system)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Documentation required, knowledge loss
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Human Judgment</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-yellow-100 text-yellow-800 text-sm font-medium rounded-full">
+                    ! You provide (approval gate)
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    ✓ Independent decision-making
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-6 text-gray-900 font-medium">Best For</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 text-sm font-medium rounded-full">
+                    Fast iteration, MVP, routine work
+                  </span>
+                </td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Complex architecture, critical systems
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Honest Note -->
+        <div class="mt-12 max-w-3xl mx-auto">
+          <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+              <div>
+                <h3 class="text-lg font-semibold text-yellow-900 mb-2">The Honest Truth</h3>
+                <p class="text-yellow-800">
+                  Cortana isn't replacing senior engineers—for critical systems, complex architecture, or production-critical code, you still need experienced humans. But for MVP development, routine tasks, research, and rapid iteration? AI agents are 50-100x more cost-effective than contractors, and they never sleep.
+                </p>
+                <p class="text-yellow-800 mt-3">
+                  Use both: Cortana for speed and iteration, humans for critical review and architecture. That's the winning combo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-primary-600">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to try a better approach?
+          </h2>
+          <p class="text-xl text-primary-100 mb-8">
+            Multi-agent coordination with human oversight. Built for builders who need to ship.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://github.com/lurielle-studio/cortana" class="bg-white text-primary-600 px-8 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors w-full sm:w-auto">
+              Get Started Free
+            </a>
+            <a href="/demo" class="bg-primary-700 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-800 transition-colors w-full sm:w-auto">
+              Try the Interactive Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,406 @@
+---
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-primary-50 to-white py-12">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="inline-flex items-center px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm font-medium mb-4">
+            🎯 Interactive Demo
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            See Cortana in Action
+          </h1>
+          <p class="text-xl text-gray-600">
+            Explore a real conversation thread where multiple AI agents collaborate to build a feature. Click through the annotations to understand what's happening.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Interface -->
+    <section class="py-12 bg-gray-50">
+      <div class="container-custom">
+        <div class="max-w-5xl mx-auto">
+          
+          <!-- Demo Info Banner -->
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+            <div class="flex items-start">
+              <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <div>
+                <p class="text-sm font-medium text-blue-900 mb-1">This is a demo conversation</p>
+                <p class="text-sm text-blue-700">Click on the <span class="inline-flex items-center px-2 py-0.5 bg-blue-200 text-blue-800 rounded text-xs font-medium">blue numbered badges</span> to see explanations of what's happening at each step.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thread Container -->
+          <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            
+            <!-- Thread Header -->
+            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h2 class="text-lg font-semibold text-gray-900">Feature: User Authentication System</h2>
+                  <p class="text-sm text-gray-600">Thread #42 • 8 messages • 2 agents active</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">● Live</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Messages -->
+            <div class="p-6 space-y-6">
+              
+              <!-- Message 1: User -->
+              <div class="relative" id="message-1">
+                <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold annotation-badge cursor-pointer" data-annotation="1">1</div>
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">You</div>
+                  <div class="flex-1">
+                    <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                      <p class="text-gray-800">@ceo @cto I need to build a user authentication system for our app. Can you help break this down?</p>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">You • Just now</p>
+                  </div>
+                </div>
+                
+                <!-- Annotation 1 -->
+                <div class="hidden annotation-content mt-4 ml-14 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p class="text-sm font-semibold text-blue-900 mb-2">Step 1: User Invokes Agents</p>
+                  <p class="text-sm text-blue-700">The user explicitly mentions @ceo and @cto using the @mention system. This tells Cortana which specialized agents should respond. The CEO agent will focus on strategy and task breakdown, while the CTO agent will provide technical guidance.</p>
+                </div>
+              </div>
+
+              <!-- Message 2: CEO Agent -->
+              <div class="relative" id="message-2">
+                <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold annotation-badge cursor-pointer" data-annotation="2">2</div>
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">CEO</div>
+                  <div class="flex-1">
+                    <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                      <p class="text-gray-800 mb-3">Absolutely! Let me break this down into manageable tasks:</p>
+                      <div class="bg-gray-50 rounded-lg p-3 space-y-2">
+                        <div class="flex items-center justify-between">
+                          <span class="text-sm text-gray-700">Design database schema</span>
+                          <span class="px-2 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded">Proposed</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <span class="text-sm text-gray-700">Implement login/logout endpoints</span>
+                          <span class="px-2 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded">Proposed</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <span class="text-sm text-gray-700">Write integration tests</span>
+                          <span class="px-2 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded">Proposed</span>
+                        </div>
+                      </div>
+                      <p class="text-sm text-primary-600 mt-3 font-medium">✓ Created 3 tasks (awaiting your approval)</p>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">CEO Agent • 2 seconds ago</p>
+                  </div>
+                </div>
+                
+                <!-- Annotation 2 -->
+                <div class="hidden annotation-content mt-4 ml-14 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p class="text-sm font-semibold text-blue-900 mb-2">Step 2: CEO Breaks Down Vision</p>
+                  <p class="text-sm text-blue-700">The CEO agent analyzes the request and creates structured tasks. Notice that all tasks are marked as "Proposed"—they require human approval before any work begins. This is the Human Approval Gate in action. The CEO uses the <code class="px-1 py-0.5 bg-gray-100 rounded text-xs">create_task</code> tool to propose these tasks to the board.</p>
+                </div>
+              </div>
+
+              <!-- Message 3: CTO Agent -->
+              <div class="relative" id="message-3">
+                <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold annotation-badge cursor-pointer" data-annotation="3">3</div>
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">CTO</div>
+                  <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                    <p class="text-gray-800 mb-3">Great breakdown! I'll add some technical guidance:</p>
+                    <ul class="space-y-2 text-gray-700">
+                      <li class="flex items-start">
+                        <span class="text-purple-600 mr-2">•</span>
+                        <span>Use JWT with refresh tokens for session management</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-purple-600 mr-2">•</span>
+                        <span>Store passwords with bcrypt (cost factor 12)</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-purple-600 mr-2">•</span>
+                        <span>Add rate limiting to prevent brute force attacks</span>
+                      </li>
+                      <li class="flex items-start">
+                        <span class="text-purple-600 mr-2">•</span>
+                        <span>Plan for OAuth integration (Google, GitHub) from the start</span>
+                      </li>
+                    </ul>
+                    <p class="text-sm text-purple-600 mt-3 font-medium">✓ Added technical specifications to tasks</p>
+                  </div>
+                  <p class="text-xs text-gray-500 mt-2">CTO Agent • 4 seconds ago</p>
+                </div>
+                
+                <!-- Annotation 3 -->
+                <div class="hidden annotation-content mt-4 ml-14 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p class="text-sm font-semibold text-blue-900 mb-2">Step 3: CTO Adds Technical Expertise</p>
+                  <p class="text-sm text-blue-700">The CTO agent sees the CEO's message (multi-agent coordination!) and builds on it with technical depth. This is the power of shared conversation threads—each agent has full context of what came before. The CTO uses the <code class="px-1 py-0.5 bg-gray-100 rounded text-xs">search_memory</code> tool to recall best practices from past projects.</p>
+                </div>
+              </div>
+
+              <!-- Message 4: User Approval -->
+              <div class="relative" id="message-4">
+                <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold annotation-badge cursor-pointer" data-annotation="4">4</div>
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">You</div>
+                  <div class="flex-1">
+                    <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                      <p class="text-gray-800 mb-3">Perfect! I approve all three tasks. Let's get started.</p>
+                      <div class="bg-green-50 border border-green-200 rounded-lg p-3">
+                        <p class="text-sm font-medium text-green-900 mb-2">✓ Approved 3 tasks:</p>
+                        <ul class="text-sm text-green-700 space-y-1">
+                          <li>• Design database schema</li>
+                          <li>• Implement login/logout endpoints</li>
+                          <li>• Write integration tests</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">You • 10 seconds ago</p>
+                  </div>
+                </div>
+                
+                <!-- Annotation 4 -->
+                <div class="hidden annotation-content mt-4 ml-14 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p class="text-sm font-semibold text-blue-900 mb-2">Step 4: Human Approval Gate</p>
+                  <p class="text-sm text-blue-700">You review the proposed tasks and approve them. This is the critical Human Approval Gate—nothing proceeds without your explicit OK. Once approved, tasks move from "Proposed" to "Approved" status on the task board, and a Worker agent is automatically spawned to execute them.</p>
+                </div>
+              </div>
+
+              <!-- Message 5: Worker Agent -->
+              <div class="relative" id="message-5">
+                <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold annotation-badge cursor-pointer" data-annotation="5">5</div>
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">Worker</div>
+                  <div class="flex-1">
+                    <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                      <p class="text-gray-800 mb-3">I'm starting work on the database schema. Here's my progress:</p>
+                      <div class="bg-gray-800 rounded-lg p-3 overflow-x-auto">
+                        <pre class="text-xs text-green-400 font-mono"><code>CREATE TABLE users (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  refresh_token UUID,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_users_email ON users(email);</code></pre>
+                      </div>
+                      <p class="text-sm text-green-600 mt-3 font-medium">✓ Saving schema artifact • 45% complete on Task 1</p>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">Worker Agent • 25 seconds ago</p>
+                  </div>
+                </div>
+                
+                <!-- Annotation 5 -->
+                <div class="hidden annotation-content mt-4 ml-14 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p class="text-sm font-semibold text-blue-900 mb-2">Step 5: Worker Executes Tasks</p>
+                  <p class="text-sm text-blue-700">A Worker agent (ephemeral, task-specific) is spawned to execute the approved work. It has access to code tools (<code class="px-1 py-0.5 bg-gray-100 rounded text-xs">read_file</code>, <code class="px-1 py-0.5 bg-gray-100 rounded text-xs">write_file</code>, <code class="px-1 py-0.5 bg-gray-100 rounded text-xs">bash</code>) and saves artifacts. The Worker posts progress updates to the thread so you can follow along in real-time.</p>
+                </div>
+              </div>
+
+              <!-- Message 6: Worker Completion -->
+              <div class="relative" id="message-6">
+                <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold annotation-badge cursor-pointer" data-annotation="6">6</div>
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">Worker</div>
+                  <div class="flex-1">
+                    <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                      <p class="text-gray-800 mb-3">Task complete! I've finished all three tasks:</p>
+                      <div class="space-y-2">
+                        <div class="flex items-center justify-between p-2 bg-green-50 rounded border border-green-200">
+                          <span class="text-sm text-gray-700">✓ Database schema</span>
+                          <a href="#" class="text-xs text-green-600 hover:underline">View artifact →</a>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-green-50 rounded border border-green-200">
+                          <span class="text-sm text-gray-700">✓ Login/logout endpoints</span>
+                          <a href="#" class="text-xs text-green-600 hover:underline">View artifact →</a>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-green-50 rounded border border-green-200">
+                          <span class="text-sm text-gray-700">✓ Integration tests (12 passing)</span>
+                          <a href="#" class="text-xs text-green-600 hover:underline">View artifact →</a>
+                        </div>
+                      </div>
+                      <p class="text-sm text-green-600 mt-3 font-medium">🎉 All tasks complete! Ready for your review.</p>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">Worker Agent • 2 minutes ago</p>
+                  </div>
+                </div>
+                
+                <!-- Annotation 6 -->
+                <div class="hidden annotation-content mt-4 ml-14 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p class="text-sm font-semibold text-blue-900 mb-2">Step 6: Task Completion & Artifacts</p>
+                  <p class="text-sm text-blue-700">The Worker completes all tasks and saves artifacts (code files, test results, etc.). Each artifact is attached to the task and accessible via the task board. The Worker signals completion, and the thread is ready for your final review. Once you're satisfied, the thread can be archived, and the learnings are promoted to context-level memory.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Thread Footer -->
+            <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+              <div class="flex items-center justify-between">
+                <p class="text-sm text-gray-600">Thread is ready for review. All tasks complete.</p>
+                <div class="flex gap-2">
+                  <button class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded hover:bg-gray-200 transition-colors">
+                    Archive Thread
+                  </button>
+                  <button class="px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded hover:bg-primary-700 transition-colors">
+                    Request Changes
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Demo CTA -->
+          <div class="mt-12 bg-white rounded-xl p-8 border border-gray-200 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Want to try this yourself?</h3>
+            <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+              Set up Cortana in 5 minutes and start coordinating AI agents on your real projects. Open source and free for solo founders.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="https://github.com/lurielle-studio/cortana" class="btn-primary w-full sm:w-auto">
+                Get Started on GitHub
+              </a>
+              <a href="/docs/quickstart" class="btn-secondary w-full sm:w-auto">
+                Read Quickstart Guide
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="py-20 bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Why Cortana beats single-model AI
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            See how multi-agent coordination with human oversight compares to traditional chatbots.
+          </p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Cortana
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-gray-700">Multiple specialized agents collaborate</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-gray-700">Human approval required for all actions</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-gray-700">Persistent memory across conversations</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-gray-700">Real task execution with artifacts</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <svg class="w-6 h-6 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Traditional Chatbots
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-gray-600">Single model, no specialization</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-gray-600">No approval—executes immediately</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-gray-600">Session-only memory (lost after close)</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-gray-600">Chat only—no real actions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  // Annotation interaction
+  document.querySelectorAll('.annotation-badge').forEach(badge => {
+    badge.addEventListener('click', () => {
+      const annotationId = badge.getAttribute('data-annotation');
+      const annotationContent = badge.parentElement.querySelector('.annotation-content');
+      
+      // Toggle this annotation
+      annotationContent.classList.toggle('hidden');
+      badge.classList.toggle('ring-2', !annotationContent.classList.contains('hidden'));
+      badge.classList.toggle('ring-blue-400', !annotationContent.classList.contains('hidden'));
+      
+      // Close other annotations
+      document.querySelectorAll('.annotation-content').forEach(content => {
+        if (content !== annotationContent && !content.classList.contains('hidden')) {
+          content.classList.add('hidden');
+          const otherBadge = content.parentElement.querySelector('.annotation-badge');
+          otherBadge?.classList.remove('ring-2', 'ring-blue-400');
+        }
+      });
+    });
+  });
+</script>
