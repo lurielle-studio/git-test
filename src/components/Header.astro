@@ -16,6 +16,7 @@
       <nav class="hidden md:flex items-center space-x-8">
         <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
         <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 transition-colors">How it Works</a>
+        <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
         <a href="/docs/" class="text-gray-600 hover:text-gray-900 transition-colors">Docs</a>
         <a href="https://github.com/lurielle-studio/cortana" class="text-gray-600 hover:text-gray-900 transition-colors">GitHub</a>
       </nav>
@@ -30,9 +31,9 @@
       <!-- Mobile menu button -->
       <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-gray-900" aria-label="Toggle menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="4" x2="20" y1="12" y2="12"/>
-          <line x1="4" x2="20" y1="6" y2="6"/>
-          <line x1="4" x2="20" y1="18" y2="18"/>
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
         </svg>
       </button>
     </div>
@@ -43,6 +44,7 @@
     <nav class="container-custom py-4 space-y-4">
       <a href="#features" class="block text-gray-600 hover:text-gray-900 transition-colors">Features</a>
       <a href="#how-it-works" class="block text-gray-600 hover:text-gray-900 transition-colors">How it Works</a>
+      <a href="#pricing" class="block text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
       <a href="/docs/" class="block text-gray-600 hover:text-gray-900 transition-colors">Docs</a>
       <a href="https://github.com/lurielle-studio/cortana" class="block text-gray-600 hover:text-gray-900 transition-colors">GitHub</a>
       <a href="https://github.com/lurielle-studio/cortana" class="btn-primary w-full text-center">
@@ -58,5 +60,12 @@
   
   mobileMenuBtn?.addEventListener('click', () => {
     mobileMenu?.classList.toggle('hidden');
+  });
+  
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
   });
 </script>
