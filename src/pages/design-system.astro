@@ -1,0 +1,236 @@
+---
+layout: '../components/Layout.astro'
+title: 'Design System'
+description: 'Cortana design system components and guidelines'
+---
+
+<div class="container-custom py-12">
+  <h1 class="text-hero mb-8 text-balance">Design System</h1>
+  <p class="text-body-lg mb-12 max-w-3xl">
+    Components and styles for the Cortana marketing site. Built with Tailwind CSS and Astro.
+  </p>
+  
+  <!-- Buttons Section -->
+  <section class="section-padding">
+    <h2 class="text-section mb-6">Buttons</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <!-- Primary Buttons -->
+      <div>
+        <h3 class="text-subsection mb-4">Primary</h3>
+        <div class="space-y-4">
+          <button class="btn-primary">Default</button>
+          <button class="btn-primary btn-primary-sm">Small</button>
+          <button class="btn-primary btn-primary-sm" disabled>Disabled</button>
+        </div>
+      </div>
+      
+      <!-- Secondary Buttons -->
+      <div>
+        <h3 class="text-subsection mb-4">Secondary</h3>
+        <div class="space-y-4">
+          <button class="btn-secondary">Default</button>
+          <button class="btn-secondary btn-secondary-sm">Small</button>
+          <button class="btn-secondary btn-secondary-sm" disabled>Disabled</button>
+        </div>
+      </div>
+      
+      <!-- Outline Buttons -->
+      <div>
+        <h3 class="text-subsection mb-4">Outline</h3>
+        <div class="space-y-4">
+          <button class="btn-outline">Default</button>
+          <button class="btn-outline btn-outline-sm">Small</button>
+          <button class="btn-outline btn-outline-sm" disabled>Disabled</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Large Buttons -->
+    <div class="bg-gray-50 rounded-xl p-8">
+      <h3 class="text-subsection mb-4">Large CTAs</h3>
+      <div class="flex flex-wrap gap-4">
+        <button class="btn-primary btn-primary-lg">Primary Large</button>
+        <button class="btn-secondary btn-secondary-lg">Secondary Large</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Typography Section -->
+  <section class="section-padding">
+    <h2 class="text-section mb-6">Typography</h2>
+    
+    <div class="space-y-8 mb-12">
+      <div>
+        <h3 class="text-caption mb-2 uppercase tracking-wide">Hero Headline</h3>
+        <p class="text-hero mb-2">Ship faster with AI teammates</p>
+      </div>
+      
+      <div>
+        <h3 class="text-caption mb-2 uppercase tracking-wide">Section Header</h3>
+        <p class="text-section mb-2">Why choose Cortana?</p>
+      </div>
+      
+      <div>
+        <h3 class="text-caption mb-2 uppercase tracking-wide">Subsection</h3>
+        <p class="text-subsection mb-2">Multi-agent coordination</p>
+      </div>
+      
+      <div>
+        <h3 class="text-caption mb-2 uppercase tracking-wide">Body Text</h3>
+        <p class="text-body">
+          Cortana enables specialized AI agents to collaborate in shared conversation threads.
+          You maintain control with approval gates while agents handle the heavy lifting.
+        </p>
+      </div>
+      
+      <div>
+        <h3 class="text-caption mb-2 uppercase tracking-wide">Caption</h3>
+        <p class="text-caption">Built for solo founders who need to move fast.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Colors Section -->
+  <section class="section-padding">
+    <h2 class="text-section mb-6">Colors</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <!-- Primary Colors -->
+      <div>
+        <h3 class="text-subsection mb-4">Cortana Blues</h3>
+        <div class="grid grid-cols-5 gap-2">
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-50 mb-2"></div>
+            <span class="text-xs text-gray-600">50</span>
+          </div>
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-100 mb-2"></div>
+            <span class="text-xs text-gray-600">100</span>
+          </div>
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-200 mb-2"></div>
+            <span class="text-xs text-gray-600">200</span>
+          </div>
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-300 mb-2"></div>
+            <span class="text-xs text-gray-600">300</span>
+          </div>
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-400 mb-2"></div>
+            <span class="text-xs text-gray-600">400</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-5 gap-2 mt-2">
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-500 mb-2"></div>
+            <span class="text-xs text-white">500</span>
+          </div>
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-600 mb-2"></div>
+            <span class="text-xs text-white">600</span>
+          </div>
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-700 mb-2"></div>
+            <span class="text-xs text-white">700</span>
+          </div>
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-800 mb-2"></div>
+            <span class="text-xs text-white">800</span>
+          </div>
+          <div class="rounded-lg p-4 text-center">
+            <div class="h-12 rounded-md bg-cortana-900 mb-2"></div>
+            <span class="text-xs text-white">900</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Accent Colors -->
+      <div>
+        <h3 class="text-subsection mb-4">Accent & Semantic</h3>
+        <div class="mb-6">
+          <div class="grid grid-cols-3 gap-2 mb-2">
+            <div class="rounded-lg p-4 text-center">
+              <div class="h-12 rounded-md bg-accent-500 mb-2"></div>
+              <span class="text-xs text-gray-700">Purple</span>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-2 text-sm">Semantic</h4>
+          <div class="grid grid-cols-3 gap-2">
+            <div class="rounded-lg p-4 text-center">
+              <div class="h-12 rounded-md bg-success-500 mb-2"></div>
+              <span class="text-xs text-gray-700">Success</span>
+            </div>
+            <div class="rounded-lg p-4 text-center">
+              <div class="h-12 rounded-md bg-warning-500 mb-2"></div>
+              <span class="text-xs text-gray-700">Warning</span>
+            </div>
+            <div class="rounded-lg p-4 text-center">
+              <div class="h-12 rounded-md bg-error-500 mb-2"></div>
+              <span class="text-xs text-gray-700">Error</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Cards Section -->
+  <section class="section-padding">
+    <h2 class="text-section mb-6">Cards</h2>
+    
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-2">Default Card</h3>
+        <p class="text-gray-600 text-sm">Basic card with white background and subtle border.</p>
+      </div>
+      
+      <div class="card-feature">
+        <h3 class="text-lg font-semibold mb-2">Feature Card</h3>
+        <p class="text-gray-600 text-sm">Gray background variant for feature highlights.</p>
+      </div>
+      
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-lg font-semibold mb-2">Shadow Card</h3>
+        <p class="text-gray-600 text-sm">Elevated card with shadow for emphasis.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Logo Section -->
+  <section class="section-padding bg-gray-50 rounded-xl p-8">
+    <h2 class="text-section mb-6">Logo</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl p-8 flex items-center justify-center">
+        <div class="text-center">
+          <img src="/logo.svg" alt="Cortana Logo" class="h-16 mb-4 mx-auto">
+          <p class="text-caption">Primary Logo (Light Background)</p>
+        </div>
+      </div>
+      
+      <div class="bg-cortana-900 rounded-xl p-8 flex items-center justify-center">
+        <div class="text-center">
+          <img src="/logo-white.svg" alt="Cortana Logo White" class="h-16 mb-4 mx-auto">
+          <p class="text-caption" style="color: rgba(255,255,255,0.7)">White Logo (Dark Background)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Link to Brand Guidelines -->
+  <section class="section-padding text-center">
+    <div class="bg-cortana-50 rounded-xl p-8">
+      <h2 class="text-section mb-4">Full Documentation</h2>
+      <p class="text-body mb-6 max-w-2xl mx-auto">
+        For complete brand guidelines including voice and tone, logo usage, and accessibility standards, see the full documentation.
+      </p>
+      <a href="/docs/brand" class="btn-primary">
+        View Brand Guidelines
+      </a>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle (transparent for dark mode) -->
+  <rect width="32" height="32" rx="8" fill="white"/>
+  
+  <!-- Letter C (stylized in brand blue) -->
+  <path d="M22 16C22 20.4183 18.4183 24 14 24V20C16.2091 20 18 18.2091 18 16C18 13.7909 16.2091 12 14 12V8C18.4183 8 22 11.5817 22 16Z" fill="#0284c7"/>
+  <rect x="10" y="8" width="4" height="16" rx="2" fill="#0284c7"/>
+  
+  <!-- Small orbit accent -->
+  <circle cx="22" cy="10" r="2" fill="#38bdf8"/>
+</svg>
